@@ -14,6 +14,9 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
+  optimizeDeps: {
+    exclude: ['@prisma/client'],
+  },
   build: {
     rollupOptions: {
       output: {
