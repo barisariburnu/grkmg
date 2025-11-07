@@ -1,0 +1,16 @@
+export { IconDiscord } from '@/assets/brand-icons/icon-discord';
+export { IconDocker } from '@/assets/brand-icons/icon-docker';
+export { IconFacebook } from '@/assets/brand-icons/icon-facebook';
+export { IconFigma } from '@/assets/brand-icons/icon-figma';
+export { IconGithub } from '@/assets/brand-icons/icon-github';
+export { IconGitlab } from '@/assets/brand-icons/icon-gitlab';
+export { IconGmail } from '@/assets/brand-icons/icon-gmail';
+export { IconMedium } from '@/assets/brand-icons/icon-medium';
+export { IconNotion } from '@/assets/brand-icons/icon-notion';
+export { IconSkype } from '@/assets/brand-icons/icon-skype';
+export { IconSlack } from '@/assets/brand-icons/icon-slack';
+export { IconStripe } from '@/assets/brand-icons/icon-stripe';
+export { IconTelegram } from '@/assets/brand-icons/icon-telegram';
+export { IconTrello } from '@/assets/brand-icons/icon-trello';
+export { IconWhatsapp } from '@/assets/brand-icons/icon-whatsapp';
+export { IconZoom } from '@/assets/brand-icons/icon-zoom';

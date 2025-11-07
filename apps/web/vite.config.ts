@@ -1,37 +1,22 @@
-import { defineConfig } from 'vite';
-import viteReact from '@vitejs/plugin-react';
-import tailwindcss from '@tailwindcss/vite';
-import { tanstackStart } from '@tanstack/react-start/plugin/vite';
-import viteTsConfigPaths from 'vite-tsconfig-paths';
+import path from 'path'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+import tailwindcss from '@tailwindcss/vite'
+import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
-const config = defineConfig({
+// https://vite.dev/config/
+export default defineConfig({
   plugins: [
-    // this is the plugin that enables path aliases
-    viteTsConfigPaths({
-      projects: ['./tsconfig.json'],
+    tanstackRouter({
+      target: 'react',
+      autoCodeSplitting: true,
     }),
+    react(),
     tailwindcss(),
-    tanstackStart(),
-    viteReact(),
   ],
-  optimizeDeps: {
-    exclude: ['@prisma/client'],
-  },
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks(id) {
-          if (id.includes('node_modules')) {
-            if (id.includes('/react/') || id.includes('react-dom') || id.includes('react')) return 'react';
-            if (id.includes('@tanstack')) return 'tanstack';
-            if (id.includes('lucide-react')) return 'lucide';
-            if (id.includes('@sentry')) return 'sentry';
-            return 'vendor';
-          }
-        },
-      },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
   },
-});
-
-export default config;
+})

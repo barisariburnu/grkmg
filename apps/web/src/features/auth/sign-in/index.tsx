@@ -1,4 +1,4 @@
-import { useSearch } from '@tanstack/react-router';
+import { useSearch } from '@tanstack/react-router'
 import {
   Card,
   CardContent,
@@ -6,18 +6,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@workspace/ui/components/ui/card';
-import { AuthLayout } from '@/features/auth/layout';
-import { UserAuthForm } from '@/features/auth/sign-in/components/user-auth-form';
+} from '@/components/ui/card'
+import { AuthLayout } from '../auth-layout'
+import { UserAuthForm } from './components/user-auth-form'
 
 export function SignIn() {
-  const { redirect } = useSearch({ from: '/(auth)/sign-in' });
+  const { redirect } = useSearch({ from: '/(auth)/sign-in' })
 
   return (
     <AuthLayout>
-      <Card className="gap-4">
+      <Card className='gap-4'>
         <CardHeader>
-          <CardTitle className="text-lg tracking-tight">Sign in</CardTitle>
+          <CardTitle className='text-lg tracking-tight'>Sign in</CardTitle>
           <CardDescription>
             Enter your email and password below to <br />
             log into your account
@@ -27,18 +27,18 @@ export function SignIn() {
           <UserAuthForm redirectTo={redirect} />
         </CardContent>
         <CardFooter>
-          <p className="text-muted-foreground px-8 text-center text-sm">
+          <p className='text-muted-foreground px-8 text-center text-sm'>
             By clicking sign in, you agree to our{' '}
             <a
-              href="/terms"
-              className="hover:text-primary underline underline-offset-4"
+              href='/terms'
+              className='hover:text-primary underline underline-offset-4'
             >
               Terms of Service
             </a>{' '}
             and{' '}
             <a
-              href="/privacy"
-              className="hover:text-primary underline underline-offset-4"
+              href='/privacy'
+              className='hover:text-primary underline underline-offset-4'
             >
               Privacy Policy
             </a>
@@ -47,5 +47,5 @@ export function SignIn() {
         </CardFooter>
       </Card>
     </AuthLayout>
-  );
+  )
 }

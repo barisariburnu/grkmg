@@ -1,20 +1,20 @@
 import {
-  Send as IconTelegram,
-  NotebookText as IconNotion,
-  Palette as IconFigma,
-  KanbanSquare as IconTrello,
-  Slack as IconSlack,
-  Video as IconZoom,
-  CreditCard as IconStripe,
-  Mail as IconGmail,
-  BookOpen as IconMedium,
-  Phone as IconSkype,
-  Boxes as IconDocker,
-  Github as IconGithub,
-  Gitlab as IconGitlab,
-  Telescope as IconDiscord,
-  MessageCircle as IconWhatsapp,
-} from 'lucide-react';
+  IconTelegram,
+  IconNotion,
+  IconFigma,
+  IconTrello,
+  IconSlack,
+  IconZoom,
+  IconStripe,
+  IconGmail,
+  IconMedium,
+  IconSkype,
+  IconDocker,
+  IconGithub,
+  IconGitlab,
+  IconDiscord,
+  IconWhatsapp,
+} from '@/assets/brand-icons'
 
 export const apps = [
   {
@@ -107,4 +107,4 @@ export const apps = [
     connected: false,
     desc: 'Easily integrate WhatsApp for direct messaging.',
   },
-];
+]
