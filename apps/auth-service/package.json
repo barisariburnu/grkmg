@@ -1,0 +1,26 @@
+{
+  "name": "auth-service",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "dev": "pnpm dlx tsx --env-file=.env.local --watch src/index.ts",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "format": "pnpm exec prettier --write ."
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.0.3"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "@workspace/types": "workspace:*",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3"
+  }
+}

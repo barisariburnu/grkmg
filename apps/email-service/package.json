@@ -1,0 +1,25 @@
+{
+  "name": "email-service",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "dev": "pnpm dlx tsx --env-file=.env.local --watch src/index.ts",
+    "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
+    "format": "pnpm exec prettier --write ."
+  },
+  "dependencies": {
+    "@workspace/types": "workspace:*",
+    "nodemailer": "^7.0.9"
+  },
+  "devDependencies": {
+    "@workspace/typescript-config": "workspace:*",
+    "@types/node": "^24.8.1",
+    "@types/nodemailer": "^7.0.2"
+  }
+}
